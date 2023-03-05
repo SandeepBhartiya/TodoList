@@ -47,6 +47,9 @@ app.put('/todos/complete/:id',async(req,res)=>{
     todo.save();
     res.json(todo);
 })
-app.listen(3301,()=>{
-    console.log("Server started at 3301")
+const PORT=process.env.PORT|| 5000;
+
+
+app.listen(PORT,()=>{
+    console.log(`Server started at ${PORT}`)
 })
