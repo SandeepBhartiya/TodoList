@@ -1,0 +1,17 @@
+GET http://localhost:3301/todos
+
+###
+
+POST http://localhost:3301/todos/new
+Content-Type: application/json
+
+{
+    "text":"Order MC"
+}
+
+###
+
+DELETE  http://localhost:3301/todo/delete/64030e4b34820148298b117d
+
+###
+PUT http://localhost:3301/todos/complete/640358bea64df80b836eb29f
