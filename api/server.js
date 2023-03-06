@@ -7,8 +7,9 @@ app.use(express.json());
 app.use(cors());
 
 const Todo=require('./models/Todo')
-
-mongoose.connect("mongodb://127.0.0.1:27017/mern-todo",{
+const dbConfig=require('./configs/db.config');
+console.log(dbConfig.DB_URL)
+mongoose.connect(dbConfig.DB_URL,{
     useNewUrlParser:true,
     useUnifiedTopology:true
 })
